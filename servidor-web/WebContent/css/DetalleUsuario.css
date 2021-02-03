@@ -1,0 +1,59 @@
+.presentacion {
+	font-size : 20px;
+	margin-top : 40px;
+}
+
+.imgPerfil {
+	width : 20%;
+	margin : 0 4% 2% 4%;
+	border-radius : 25px;
+	float : left;
+}
+
+.nombre {
+    font-size: 30px;
+}
+
+.btnSeguir {
+	float: left;
+	margin-top: 9px;
+	margin-right: 20px;
+}
+
+.tabsContainer {
+    margin-top: 12%;
+    clear: left;
+}
+
+.tab-pane {
+	margin: 2%;
+}
+
+.infoLabel {
+	font-weight: bold;
+}
+
+.carousel-item img {
+	width: 100%;
+}
+.col-md-4{
+  display: inline-block;
+  margin-left:-4px;
+}
+.carousel-indicators li{
+  background-color:red;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+}
+.carousel-indicators{
+  margin-bottom: 0;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-color:red;
+}
+.carousel-inner{
+  padding: 2% 0 0 0;
+}
+

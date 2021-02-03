@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  
+  
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <title>Agregar espectaculo a paquete</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light border-bottom">
+    <!-- Titulo -->
+    <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+    <!-- Busqueda -->
+    <form class="form-inline col-sm-auto">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="input-group-append">
+          <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Usuario -->
+    <div class="btn-group col-md-auto col-sm-12">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;" src="https://bit.ly/3jrashA"></span>
+            Emma Watson
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+        <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+        <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+        <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Side Bar-->
+      <div class="bg-light border-right border-bottom col-3 p-3">
+        <h6>Plataformas</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+                    aria-controls="home">Instagram Live</a>
+                <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                    aria-controls="profile">Facebook Watch</a>
+                <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                    aria-controls="messages">Twitter Live</a>
+                <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                    aria-controls="settings">Youtube</a>
+            </div>
+            <hr>
+            <h6>Categorias</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                    aria-controls="home">Bandas Latinas</a>
+                <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                    aria-controls="profile">Solistas</a>
+                <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                    aria-controls="messages">Rock en Inglés</a>
+                <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                    aria-controls="settings">Música Tropical</a>
+            </div>
+            <div class="container">
+              <div class="row">
+                  <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+              </div>
+          </div>
+     </div>
+
+      <!--Página-->
+      <div class="col-9">
+      	<div class="container p-3r">
+      		<h4 class="text-center my-4">Agregar espectaculo a paquete</h4>
+	      
+	      
+	        <form class="mt-6 mx-auto">
+	        	<div class="form-group mb-4">
+		        	<label>Selecciona un paquete</label>
+		        	<select class="form-control" name="paquetes" id="paquetes">
+		  		  		<option>Paquete de Bandas</option>
+		      			<option>Paquete Solistas</option>
+		       			<option>Paquete Latino</option>
+		  			  </select>
+		  	  	</div>
+		  		  <div class="form-group mb-4">
+		        	<label>Selecciona una plataforma</label>
+		        	<select class="form-control" name="plataformas" id="plataformas">
+		  				  <option>Facebook Live</option>
+		    			  <option>Youtube</option>
+		    		  	<option>Twitter Live</option>
+		    	  		<option>Instagram Live</option>
+		  	  		</select>
+		  	  	</div>
+		  		<div class="form-group mb-4">
+		        <label>Selecciona un espectaculo</label>
+            <select class="form-control" name="plataformas" id="plataformas">
+		  				<option>Los Village Volvieron</option>
+		    			<option>Global Spirit</option>
+		    			<option>Memphis Blues World</option>
+		    			<option>Springsteen on Broadway</option>
+		    			<option>Bien de Familia</option>
+		    			<option>30 años</option>
+		  			</select>
+		  		</div>
+		  		<div class="form-group mb-4 ">
+		  			<input type="submit" value="Agregar espectaculo a paquete" class="btn btn-primary">
+		  		</div>
+	      </form>
+	    </div>   
+      </div>
+    </div>
+  </div>
+  
+   
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <p>Todos los derechos reservados ponele</p>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+</html>

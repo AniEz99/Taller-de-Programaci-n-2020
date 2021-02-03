@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link href="../css/detalleFuncion.css" rel="stylesheet" type="text/css">
+	<title>Detalle Funcion</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-light bg-light border-bottom">
+		<!-- Titulo -->
+		<a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+		<!-- Busqueda -->
+		<form class="form-inline col-sm-auto">
+			<div class="input-group">
+				<input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+				<div class="input-group-append">
+					<a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+				</div>
+			</div>
+		</form>
+
+		<!-- Usuario -->
+		<div class="btn-group col-md-auto col-sm-12">
+			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">
+				<span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+						src="https://bit.ly/3jrashA"></span>
+				Emma Watson
+			</button>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+				<a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+				<a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+				<a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+				<a class="dropdown-item" href="#">Cerrar Sesión</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<!--Side Bar-->
+			<div class="bg-light border-right border-bottom col-3 p-3">
+				<h6>Plataformas</h1>
+					<div class="list-group" id="list-tab" role="tablist">
+						<a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+							aria-controls="home">Instagram Live</a>
+						<a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+							aria-controls="profile">Facebook Watch</a>
+						<a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+							aria-controls="messages">Twitter Live</a>
+						<a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+							aria-controls="settings">Youtube</a>
+					</div>
+					<hr>
+					<h6>Categorias</h1>
+						<div class="list-group" id="list-tab" role="tablist">
+							<a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+								aria-controls="home">Bandas Latinas</a>
+							<a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+								aria-controls="profile">Solistas</a>
+							<a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+								aria-controls="messages">Rock en Inglés</a>
+							<a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+								aria-controls="settings">Música Tropical</a>
+						</div>
+						<div class="container">
+							<div class="row">
+								<a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar
+									Paquetes</a>
+							</div>
+						</div>
+			</div>
+
+			<!--Página-->
+			<div class="col-9">
+				<div class="presentacion">
+					<img src="https://cuidateplus.marca.com/sites/default/files/styles/natural/public/montadores-espectaculos.jpg"
+						class="portada" alt="Fest">
+					<p id="nombre"> Bien de Familia - B </p>
+					<p id="fecha"> 25/10/2020 - 18:30 </p>
+					<p id="precio"> $ 500 </p>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown">Registrarse</button>
+						<div class="dropdown-menu">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-light" data-toggle="modal"
+								data-target="#centralModalSm1" Style="width: 100%">Compra normal</button>
+							<button type="button" class="btn btn-light" data-toggle="modal"
+								data-target="#centralModalSm2" Style="width: 100%">Usando Resgistros</button>
+							<button type="button" class="btn btn-light" data-toggle="modal"
+								data-target="#centralModalSm3" Style="width: 100%">Usando Paquetes</button>
+						</div>
+					</div>
+					<form class="btn-group" action="DetalleEspectaculo.html">
+						<button id="espAsoc" type="submit" class="btn btn-primary">Espectáculo asociado</button>
+					</form>
+
+					<!-- Central Modal Small (Registro normal)-->
+					<div class="modal fade" id="centralModalSm1">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Registro a función</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<!-- Modal body -->
+								<div class="modal-body">
+									<p>Compra normal</p>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary btn-sm"
+										data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-success btn-sm"
+										data-dismiss="modal">Comprar</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- Central Modal Small (Registro normal)-->
+					<!-- Central Modal Small (Usando Registros)-->
+					<div class="modal fade" id="centralModalSm2" tabindex="-1" role="dialog"
+						aria-labelledby="myModalLabel" aria-hidden="true">
+						<!-- Change class .modal-sm to change the size of the modal -->
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title w-100" id="myModalLabel">Registro a función</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Seleccione tres registros previos
+										<a href="#" data-toggle="tooltip"
+											title="Son validos los registros que no han sido utilizados y que no tengan costo 0">
+											<svg width="0.5em" height="0.5em" viewBox="0 0 16 16"
+												class="bi bi-question-circle" fill="currentColor"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd"
+													d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path
+													d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+											</svg>
+										</a>
+										<select class="selectpicker" multiple data-live-search="true" multiple
+											data-max-options="3" data-style="btn-outline-primary" data-size="3"
+											data-width="100%">
+											<option>Global Spirit (i) </option>
+											<option>Global Spirit (ii)</option>
+											<option>Memphis Blues World - C</option>
+											<option>Springsteen on Broadway - iii</option>
+										</select>
+									</p>
+									<h6 align="right">Costo: $ 0</h6>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary btn-sm"
+										data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-success btn-sm"
+										data-dismiss="modal">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Central Modal Small (Usando Registros)-->
+					<!-- Central Modal Small (Usando Paquetes)-->
+					<div class="modal fade" id="centralModalSm3" tabindex="-1" role="dialog"
+						aria-labelledby="myModalLabel" aria-hidden="true">
+						<!-- Change class .modal-sm to change the size of the modal -->
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title w-100" id="myModalLabel">Registro a función</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Seleccione un paquete
+										<a href="#" data-toggle="tooltip"
+											title="Son validos los paquetes vigentes que estén asociados a este Espectaculo">
+											<svg width="0.5em" height="0.5em" viewBox="0 0 16 16"
+												class="bi bi-question-circle" fill="currentColor"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd"
+													d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path
+													d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+											</svg>
+										</a>
+										<select class="selectpicker" multiple data-live-search="true" multiple
+											data-max-options="1" data-style="btn-outline-primary" data-size="3"
+											data-width="100%">
+											<option>Paquete Solistas </option>
+										</select>
+									</p>
+									<h6 align="right">Descuento: % 30</h6>
+									<h6 align="right">Costo: $</h6>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary btn-sm"
+										data-dismiss="modal">Cancelar</button>
+									<button type="button" class="btn btn-success btn-sm"
+										data-dismiss="modal">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Central Modal Small (Usando Paquetes)-->
+				</div>
+				<div class="informacion">
+					<p id="tDescripcion"> Descripción </p>
+					<p id="desc">
+						Espectáculo la palabra hace referencia a una función o diversión pública celebrada en un cine,
+						en un circo o en otro edificio o lugar en que se congrega la gente para presenciarla y a
+						cualquier cosa que se ofrece a la vista o a la contemplación intelectual y es capaz de atraer la
+						atención y mover el ánimo infundiéndole deleite, asombro, dolor u otros afectos más o menos
+						vivos o nobles también es zona de entrenamiento
+					</p>
+				</div>
+				<div class="informacion">
+					<p id="tArtistas"> Artistas Invitados </p>
+				</div>
+				<div id="demo" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ul class="carousel-indicators">
+						<li data-target="#demo" data-slide-to="0" class="active"></li>
+						<li data-target="#demo" data-slide-to="1"></li>
+					</ul>
+					<!-- The slideshow -->
+					<div class="container carousel-inner no-padding">
+						<div class="carousel-item active">
+							<a href="DetalleUsuario.html">
+								<div class="col-xs-3 col-sm-3 col-md-3">
+									<img href="DetalleUsuario.html" id="imgArt"
+										src="https://imagenes.montevideo.com.uy/imgnoticias/202002/_W933_80/720035.jpg">
+									<p id="nomArtista">tripleNelson</p>
+							</a></div>
+						<a href="DetalleUsuario.html">
+							<div class="col-xs-3 col-sm-3 col-md-3">
+								<img id="imgArt"
+									src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Btmb-sq_character-black-panther_launch?$sq-c$">
+								<p id="nomArtista">Black Panter</p>
+						</a>
+					</div>
+					<a href="DetalleUsuario.html">
+						<div class="col-xs-3 col-sm-3 col-md-3">
+							<img id="imgArt"
+								src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Ctmb-sq_story-capt_marvel_launch?$sq-c$">
+							<p id="nomArtista">Captain Marvel</p>
+					</a>
+				</div>
+				<a href="DetalleUsuario.html">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img id="imgArt"
+							src="https://s7d9.scene7.com/is/image/DisneyStoreES/tmb-sq_character-captain_america?$sq-c$">
+						<p id="nomArtista">Captain America</p>
+				</a>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<a href="DetalleUsuario.html">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+					<img id="imgArt"
+						src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Itmb-sq_character-iron-man_launch?$sq-c$">
+					<p id="nomArtista">Iron Man</p>
+			</a></div>
+		<a href="DetalleUsuario.html">
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				<img id="imgArt" src="https://s7d9.scene7.com/is/image/DisneyStoreES/30838_spiderman_ffh_sq-l?$sq-c$">
+				<p id="nomArtista">Spider Man</p>
+		</a>
+	</div>
+	<a href="DetalleUsuario.html">
+		<div class="col-xs-3 col-sm-3 col-md-3">
+			<img id="imgArt"
+				src="https://s7d9.scene7.com/is/image/DisneyStoreES/30119_character_page_thanos_sq_m?$mob$">
+			<p id="nomArtista">Thanos</p>
+	</a></div>
+	</div>
+	</div>
+
+	<!-- Left and right controls -->
+	<!--  
+		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control-next" href="#demo" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  </a>
+		</div>
+     	-->
+	</div>
+	</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="../css/detallePaquete.css" rel="stylesheet" type="text/css">
+  <title>Espectaculo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light border-bottom">
+    <!-- Titulo -->
+    <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+    <!-- Busqueda -->
+    <form class="form-inline col-sm-auto">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="input-group-append">
+          <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Usuario -->
+    <div class="btn-group col-md-auto col-sm-12">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+            src="https://bit.ly/3jrashA"></span>
+        Emma Watson
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+        <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+        <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+        <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Side Bar-->
+      <div class="bg-light border-right border-bottom col-3 p-3">
+        <h6>Plataformas</h1>
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+              aria-controls="home">Instagram Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="profile">Facebook Watch</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="messages">Twitter Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="settings">Youtube</a>
+          </div>
+          <hr>
+          <h6>Categorias</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                aria-controls="home">Bandas Latinas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="profile">Solistas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="messages">Rock en Inglés</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="settings">Música Tropical</a>
+            </div>
+            <div class="container">
+              <div class="row">
+                <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+              </div>
+            </div>
+      </div>
+
+      <!--Página-->
+      <div class="col-9">
+        <div class="presentacion">
+          <img src="https://bit.ly/3ndBhIw" class="imgPaquete">
+          <p class="nombre"> Espectáculo - Bien de Familia </p>
+        </div>
+        <div class="informacion row">
+          <div class="col-2">
+            <p class="infoLabel"> Descripción: </p>
+          </div>
+          <div class="col-10">
+            <p>El dúo estará presentando sus más sonados éxitos y también nuevas canciones.</p>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">Duración:</p>
+          </div>
+          <div class="col-10">
+            <p>150 min</p>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">Cantidad de Espectadores:</p>
+          </div>
+          <div class="col-10">
+            <p>Mín: 10 - Máx: 500</p>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">URL:</p>
+          </div>
+          <div class="col-10">
+            <a href="https://twitter.com/PimpinelaNet">Link al Espectaculo</a>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">Costo:</p>
+          </div>
+          <div class="col-10">
+            <p>$500</p>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">Categorías asociadas:</p>
+          </div>
+          <div class="col-10">
+            <p>Bandas Latinas</p>
+          </div>
+          <div class="col-2">
+            <p class="infoLabel">Funciones:</p>
+          </div>
+
+          <div class="container carousel-inner no-padding">
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-item active">
+                <a href="Funcion.html">
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <img src="https://designshack.net/wp-content/uploads/placeholder-image.png">
+                    <p>Bien de Familia - A</p>
+                  </div>
+                </a>
+                <a href="Funcion.html">
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <img src="https://designshack.net/wp-content/uploads/placeholder-image.png">
+                    <p>Bien de Familia - B</p>
+                  </div>
+                </a>
+                <a href="Funcion.html">
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <img src="https://designshack.net/wp-content/uploads/placeholder-image.png">
+                    <p>Bien de Familia - C</p>
+                  </div>
+                </a>
+              </div>
+              <!--
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                  </ul>
+                    -->
+            </div>
+          </div>
+
+          <div class="col-2">
+            <p class="infoLabel">Paquetes:</p>
+          </div>
+
+          <div class="container carousel-inner no-padding">
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-item active">
+                <a href="detallePaquete.html">
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <img src="https://designshack.net/wp-content/uploads/placeholder-image.png">
+                    <p>Paquete Latino - A</p>
+                  </div>
+                </a>
+              </div>
+              <!--
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                  </ul>
+                    -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

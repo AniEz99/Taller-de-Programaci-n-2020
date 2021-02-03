@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.tag-categoria small {
+    background-color: var(--warning);
+    color: var(--light);
+    border-radius: 4px;
+    padding: 1px 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.tag-categoria:link, .tag-categoria:active
+.tag-categoria .tag-categoria:hover, .tag-categoria:visited, .tag-categoria:link, .tag-categoria:active{
+	text-decoration: none;
+}
+
+.favorito {
+	color: #dc3545;
+}
+
+.favorito:hover {
+	text-shadow: 2px 2px 5px #000;
+}
+
+.estrella {
+	color: gold;
+	cursor: pointer;
+}
+
+.rating-num { margin-top:0px;font-size: 54px; }
+.progress { margin-bottom: 5px;}
+.progress-bar { text-align: left; }
+.rating-desc .col-md-3 {padding-right: 0px;}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="full-pmd-ruleset"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+   <description>Full 5.1.1 PMD rule set</description>
+   <rule ref="category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod" />
+   <rule ref="category/java/bestpractices.xml/LooseCoupling" />
+   <rule ref="category/java/codestyle.xml/PackageCase" />
+   <rule ref="category/java/codestyle.xml/ShortVariable" />
+   <rule ref="category/java/bestpractices.xml/UnusedPrivateField" />
+</ruleset>

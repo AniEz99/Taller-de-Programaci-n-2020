@@ -1,0 +1,127 @@
+.resEspectaculo {
+    box-shadow: -3px 0px 0px 0px inset var(--primary);
+}
+
+.resEspectaculo::before {
+    content : '';
+    background-color : var(--primary);
+    display : block;
+    position : absolute;
+    height : 1px;
+    width : 100%;
+    z-index: 100;
+    bottom: -1px;
+    left: 0;
+}
+
+.resEspectaculo::after {
+    content : 'Espectáculo';
+    font-size: 12px;
+    color: var(--white);
+    line-height: 20px;
+    text-align:center;
+    display:block;
+    position:absolute;
+    height: 20px;
+    width: 100px;
+    background-color: var(--primary);
+    bottom:0;
+    right: 0;
+    border-radius: 10px 0 0 0;
+}
+
+.resPaquete {
+    box-shadow: -3px 0px 0px 0px inset var(--warning);
+}
+
+.resPaquete::before {
+    content : '';
+    background-color : var(--warning);
+    display : block;
+    position : absolute;
+    height : 1px;
+    width : 100%;
+    z-index: 100;
+    bottom: -1px;
+    left: 0;
+}
+
+.resPaquete::after {
+    content : 'Paquete';
+    font-size: 12px;
+    color: var(--white);
+    line-height: 20px;
+    text-align:center;
+    display:block;
+    position:absolute;
+    height: 20px;
+    width: 100px;
+    background-color: var(--warning);
+    bottom:0;
+    right: 0;
+    border-radius: 10px 0 0 0;
+}
+
+.resArtista {
+    box-shadow: -3px 0px 0px 0px inset var(--orange);
+}
+
+.resArtista::before {
+    content : '';
+    background-color : var(--orange);
+    display : block;
+    position : absolute;
+    height : 1px;
+    width : 100%;
+    z-index: 100;
+    bottom: -1px;
+    left: 0;
+}
+
+.resArtista::after {
+    content : 'Artista';
+    font-size: 12px;
+    color: var(--white);
+    line-height: 20px;
+    text-align:center;
+    display:block;
+    position:absolute;
+    height: 20px;
+    width: 100px;
+    background-color: var(--orange);
+    bottom:0;
+    right: 0;
+    border-radius: 10px 0 0 0;
+}
+
+.resEspectador {
+    box-shadow: -3px 0px 0px 0px inset var(--purple);
+}
+
+.resEspectador::before {
+    content : '';
+    background-color : var(--purple);
+    display : block;
+    position : absolute;
+    height : 1px;
+    width : 100%;
+    z-index: 100;
+    bottom: -1px;
+    left: 0;
+}
+
+.resEspectador::after {
+    content : 'Espectador';
+    font-size: 12px;
+    color: var(--white);
+    line-height: 20px;
+    text-align:center;
+    display:block;
+    position:absolute;
+    height: 20px;
+    width: 100px;
+    background-color: var(--purple);
+    bottom:0;
+    right: 0;
+    border-radius: 10px 0 0 0;
+}

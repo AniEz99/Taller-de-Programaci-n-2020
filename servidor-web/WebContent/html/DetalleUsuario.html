@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link href="../css/DetalleUsuario.css" rel="stylesheet" type="text/css">
+  <title>Watson - Perfil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light border-bottom">
+    <!-- Titulo -->
+    <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+    <!-- Busqueda -->
+    <form class="form-inline col-sm-auto">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="input-group-append">
+          <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Usuario -->
+    <div class="btn-group col-md-auto col-sm-12">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+            src="https://bit.ly/3jrashA"></span>
+        Emma Watson
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+        <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+        <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+        <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Side Bar-->
+      <div class="bg-light border-right border-bottom col-3 p-3">
+        <h6>Plataformas</h1>
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+              aria-controls="home">Instagram Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="profile">Facebook Watch</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="messages">Twitter Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="settings">Youtube</a>
+          </div>
+          <hr>
+          <h6>Categorias</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                aria-controls="home">Bandas Latinas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="profile">Solistas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="messages">Rock en Inglés</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="settings">Música Tropical</a>
+            </div>
+            <div class="container">
+              <div class="row">
+                <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+              </div>
+
+              <div class="mt-2 row custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch">
+                <label class="custom-control-label" for="switch">Cambiar tipo Usuario</label>
+              </div>
+            </div>
+      </div>
+
+      <!--Página-->
+      <div class="col-9">
+        <div id="lawaston" style="display: none;">
+
+          <div class="presentacion">
+            <img src="https://bit.ly/3jrashA" class="imgPerfil">
+            <p class="nombre"> Emma Watson
+              <button type="button" class="btn btn-outline-light text-dark" data-toggle="modal"
+                data-target="#editar_perfil">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                  <path fill-rule="evenodd"
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg>
+              </button>
+            </p>
+            <p> waston - e.watson@gmail.com </p>
+            <button id="btnSeguir" type="button" class="btn btn-outline-primary btnSeguir"
+              onclick="onFollow()">Seguir</button>
+            <button id="btnDejarSeguir" type="button" class="btn btn-outline-danger btnSeguir" onclick="onUnfollow()"
+              hidden>Dejar de seguir</button>
+          </div>
+
+          <div class="tabsContainer">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#tabGeneral" role="tab"
+                  aria-controls="tabGeneral" aria-selected="true">General</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="registros-tab" data-toggle="tab" href="#tabRegistros" role="tab"
+                  aria-controls="tabRegistros" aria-selected="false">Registros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="paquetes-tab" data-toggle="tab" href="#tabPaquetes" role="tab"
+                  aria-controls="tabPaquetes" aria-selected="false">Paquetes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="seguidores-tab" data-toggle="tab" href="#tabSeguidores" role="tab"
+                  aria-controls="tabSeguidores" aria-selected="false">Seguidores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="seguidos-tab" data-toggle="tab" href="#tabSeguidos" role="tab"
+                  aria-controls="tabSeguidos" aria-selected="false">Seguidos</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="tabGeneral" role="tabpanel" aria-labelledby="general-tab">
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Nombre: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>Emma Watson</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Nickname: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>waston</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Correo: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>e.watson@gmail.com</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Fecha de nacimiento: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>15/04/1990</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabRegistros" role="tabpanel" aria-labelledby="registros-tab">
+                <div class="container carousel-inner no-padding">
+
+                  <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-item active">
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Atmb-sq_character-ant-man_launch?$sq-c$">
+
+                          <p>Global Spirit (I)</p>
+                        </div>
+                      </a>
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Btmb-sq_character-black-panther_launch?$sq-c$">
+                          <p>Global Spirit (II)</p>
+                        </div>
+                      </a>
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Ctmb-sq_story-capt_marvel_launch?$sq-c$">
+                          <p>Memphis Blues World - C</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/tmb-sq_character-captain_america?$sq-c$">
+                          <p>Springsteen on Broadway - iii </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabPaquetes" role="tabpanel" aria-labelledby="paquetes-tab">
+                <div class="container carousel-inner no-padding">
+
+                  <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-item active">
+                      <a href="detallePaquete.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img src="https://bit.ly/2HSF4e0">
+
+                          <p>Paquete Solistas</p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabSeguidores" roles="tabpanel" aria-labelledby="seguidores-tab">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/2Geps4a" class="col-3" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">La Triple Nelson</h5>
+                        </div>
+                        <small>tripleNelson</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/33oXxqQ" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">La Ley</h5>
+                        </div>
+                        <small>la_ley</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://designshack.net/wp-content/uploads/placeholder-image.png" class="col-3 h-100"
+                        alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Eleven Ten</h5>
+                        </div>
+                        <small>eleven11</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabSeguidos" roles="tabpanel" aria-labelledby="seguidos-tab">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/2GB7vME" class="col-3" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Depeche Mode</h5>
+                        </div>
+                        <small>dmode</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/34zFWvV" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Cyndi Lauper</h5>
+                        </div>
+                        <small>clauper</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/34hFwde" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Bruce Springsteen</h5>
+                        </div>
+                        <small>bruceTheBoss</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/3ng8YZE" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Gregory House</h5>
+                        </div>
+                        <small>house</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  Modal de modificacion de datos -->
+          <div class="modal fade" id="editar_perfil" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <form class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modificar Datos</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputNombre">Nombre:</label>
+                      <input required type="text" class="form-control" id="inputNombre" value="Emma"
+                        placeholder="Nombre">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputApellido">Apellido:</label>
+                      <input required type="text" class="form-control" id="inputApellido" value="Watson"
+                        placeholder="Apellido">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputContra">Contraseña:</label>
+                      <input required type="password" class="form-control" id="inputContra" Value="mkji648"
+                        placeholder="Contraseña">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputConfContra">Confirmación de contraseña:</label>
+                      <input required type="password" class="form-control" id="inputConfContra" Value="mkji648"
+                        placeholder="Contraseña">
+                    </div>
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputFecha">Fecha de nacimiento:</label>
+                    </div>
+                    <input required id="inputFecha" class="form-control" type="date" name="bday" max="3000-12-31"
+                      min="1000-01-01" class="form-control" value="1990-09-15">
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Foto de perfil:</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Elegir foto</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Confirmar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--  Modal de modificacion de datos -->
+        </div>
+        <div id="pimpinela"  >
+
+          <div class="presentacion">
+            <img src="https://bit.ly/30t4tRI" class="imgPerfil">
+            <p class="nombre"> Pimpinela
+              <button type="button" class="btn btn-outline-light text-dark" data-toggle="modal"
+                data-target="#editar_perfil_pimpinela">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                  <path fill-rule="evenodd"
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg>
+              </button>
+            </p>
+            <p> lospimpi - lospimpi@gmail.com </p>
+            <button id="btnSeguirPimpinela" type="button" class="btn btn-outline-primary btnSeguir"
+              onclick="onFollow()">Seguir</button>
+            <button id="btnDejarSeguirPimpinela" type="button" class="btn btn-outline-danger btnSeguir" onclick="onUnfollow()"
+              hidden>Dejar de seguir</button>
+          </div>
+
+          <div class="tabsContainer">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#tabGeneral2" role="tab"
+                  aria-controls="tabGeneral" aria-selected="true">General</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="espectaculos-tab" data-toggle="tab" href="#tabEspectaculos" role="tab"
+                  aria-controls="tabRegistros" aria-selected="false">Espectaculos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="paquetes-tab" data-toggle="tab" href="#tabPaquetes2" role="tab"
+                  aria-controls="tabPaquetes" aria-selected="false">Paquetes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="seguidores-tab" data-toggle="tab" href="#tabSeguidores2" role="tab"
+                  aria-controls="tabSeguidores" aria-selected="false">Seguidores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="seguidos-tab" data-toggle="tab" href="#tabSeguidos2" role="tab"
+                  aria-controls="tabSeguidos" aria-selected="false">Seguidos</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="tabGeneral2" role="tabpanel" aria-labelledby="general-tab">
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Nombre: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>Pimpinela</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Nickname: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>lospimpi</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Correo: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>lospimpi@gmail.com</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Fecha de nacimiento: </p>
+                  </div>
+                  <div class="col-10">
+                    <p>13/8/1981</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="infoLabel">Descripción</p>
+                  </div>
+                  <div class="col-10">
+                    <p>
+                      Pimpinela es un dúo musical argentino compuesto por
+                      los hermanos Lucía Galán y Joaquín Galán. Pimpinela
+                      ha editado veinticuatro discos
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabEspectaculos" role="tabpanel" aria-labelledby="espectaculos-tab">
+                <div class="container carousel-inner no-padding">
+
+                  <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-item active">
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Atmb-sq_character-ant-man_launch?$sq-c$">
+
+                          <p>Global Spirit (I)</p>
+                        </div>
+                      </a>
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Btmb-sq_character-black-panther_launch?$sq-c$">
+                          <p>Global Spirit (II)</p>
+                        </div>
+                      </a>
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/Character_Assets_Ctmb-sq_story-capt_marvel_launch?$sq-c$">
+                          <p>Memphis Blues World - C</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="Funcion.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img
+                            src="https://s7d9.scene7.com/is/image/DisneyStoreES/tmb-sq_character-captain_america?$sq-c$">
+                          <p>Springsteen on Broadway - iii </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabPaquetes2" role="tabpanel" aria-labelledby="paquetes-tab">
+                <div class="container carousel-inner no-padding">
+
+                  <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-item active">
+                      <a href="detallePaquete.html">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                          <img src="https://bit.ly/2HSF4e0">
+
+                          <p>Paquete Solistas</p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabSeguidores2" roles="tabpanel" aria-labelledby="seguidores-tab">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/2Geps4a" class="col-3" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">La Triple Nelson</h5>
+                        </div>
+                        <small>tripleNelson</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/33oXxqQ" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">La Ley</h5>
+                        </div>
+                        <small>la_ley</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://designshack.net/wp-content/uploads/placeholder-image.png" class="col-3 h-100"
+                        alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Eleven Ten</h5>
+                        </div>
+                        <small>eleven11</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabSeguidos2" roles="tabpanel" aria-labelledby="seguidos-tab">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/2GB7vME" class="col-3" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Depeche Mode</h5>
+                        </div>
+                        <small>dmode</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/34zFWvV" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Cyndi Lauper</h5>
+                        </div>
+                        <small>clauper</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/34hFwde" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Bruce Springsteen</h5>
+                        </div>
+                        <small>bruceTheBoss</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="row">
+                      <img src="https://bit.ly/3ng8YZE" class="col-3 h-100" alt="">
+                      <div class="col-9 right">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Gregory House</h5>
+                        </div>
+                        <small>house</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  Modal de modificacion de datos -->
+          <div class="modal fade" id="editar_perfil_pimpinela" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <form class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" >Modificar Datos</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputNombrePimpinela">Nombre:</label>
+                      <input required type="text" class="form-control" id="inputNombrePimpinela" value="Pimpinela"
+                        placeholder="Nombre">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputApellidoPimpinela">Apellido:</label>
+                      <input required type="text" class="form-control" id="inputApellidoPimpinela" value="Pimpinela"
+                        placeholder="Apellido">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputContraPimpinela">Contraseña:</label>
+                      <input required type="password" class="form-control" id="inputContraPimpinela" Value="mkji648"
+                        placeholder="Contraseña">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputConfContraPimpinela">Confirmación de contraseña:</label>
+                      <input required type="password" class="form-control" id="inputConfContraPimpinela" Value="mkji648"
+                        placeholder="Contraseña">
+                    </div>
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputFechaPimpinela">Fecha de nacimiento:</label>
+                    </div>
+                    <input required id="inputFechaPimpinela" class="form-control" type="date" name="bday" max="3000-12-31"
+                      min="1000-01-01" class="form-control" value="1981-08-13">
+                  </div>
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Foto de perfil:</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFilePimpinela">
+                      <label class="custom-file-label" for="customFilePimpinela">Elegir foto</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Confirmar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--  Modal de modificacion de datos -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <p>Todos los derechos reservados ponele</p>
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+  function onFollow() {
+    document.getElementById("btnSeguir").setAttribute("hidden", "hidden");
+    document.getElementById("btnDejarSeguir").removeAttribute("hidden");
+    document.getElementById("btnSeguirPimpinela").setAttribute("hidden", "hidden");
+    document.getElementById("btnDejarSeguirPimpinela").removeAttribute("hidden");
+  }
+
+  function onUnfollow() {
+    document.getElementById("btnDejarSeguir").setAttribute("hidden", "hidden");
+    document.getElementById("btnSeguir").removeAttribute("hidden");
+    document.getElementById("btnDejarSeguirPimpinela").setAttribute("hidden", "hidden");
+    document.getElementById("btnSeguirPimpinela").removeAttribute("hidden");
+  }
+
+</script>
+<script src="../js/registro.js"></script>
+<script src="../js/usuario.js"></script>
+
+</html>

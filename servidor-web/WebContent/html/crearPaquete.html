@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <title>Crear paquete</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light border-bottom">
+    <!-- Titulo -->
+    <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+    <!-- Busqueda -->
+    <form class="form-inline col-sm-auto">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="input-group-append">
+          <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Usuario -->
+    <div class="btn-group col-md-auto col-sm-12">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+            src="https://bit.ly/3jrashA"></span>
+        Emma Watson
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+        <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+        <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+        <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Side Bar-->
+      <div class="bg-light border-right border-bottom col-3 p-3">
+        <h6>Plataformas</h1>
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+              aria-controls="home">Instagram Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="profile">Facebook Watch</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="messages">Twitter Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="settings">Youtube</a>
+          </div>
+          <hr>
+          <h6>Categorias</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                aria-controls="home">Bandas Latinas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="profile">Solistas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="messages">Rock en Inglés</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="settings">Música Tropical</a>
+            </div>
+            <div class="container">
+              <div class="row">
+                <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+              </div>
+            </div>
+      </div>
+
+      <!--Página-->
+      <div class="col-9">
+
+        <div class="container p-3 my-3">
+          <h1>Crear paquete</h4>
+            <hr>
+
+            <form>
+              <div class="form-group row">
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre del paquete" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="descripcion" class="col-sm-2 col-form-label">Descripción:</label>
+                <div class="col-sm-8">
+                  <textarea type="text" class="form-control rounded-0" rows="5" id="descripcion"
+                    placeholder="Descripcion del paquete" required></textarea>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-5">
+                  <label for="fechaInicio">Fecha inicio:</label>
+                  <input type="date" class="form-control" id="fechaInicio" required>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="fechaFin">Fecha fin:</label>
+                  <input type="date" class="form-control" id="fechaFin" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="descuento" class="col-sm-1 col-form-label">Descuento:</label>
+                <div class="col-sm-4 input-group">
+                  <input type="number" class="form-control" id="descuento" placeholder="0" max="100" min="0" required>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">%</div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="imagen">
+                    <label class="custom-file-label" for="imagen">Elije una imagen</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-outline-success" type="submit">Crear</button>
+            </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <p>Todos los derechos reservados ponele</p>
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

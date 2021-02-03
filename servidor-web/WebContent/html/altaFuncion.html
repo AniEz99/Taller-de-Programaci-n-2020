@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  
+  
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <title>Alta funcion espectaculo</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light border-bottom">
+    <!-- Titulo -->
+    <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+    <!-- Busqueda -->
+    <form class="form-inline col-sm-auto">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="input-group-append">
+          <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Usuario -->
+    <div class="btn-group col-md-auto col-sm-12">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;" src="https://bit.ly/3jrashA"></span>
+            Emma Watson
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+        <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+        <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+        <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Side Bar-->
+      <div class="bg-light border-right border-bottom col-3 p-3">
+        <h6>Plataformas</h1>
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+              aria-controls="home">Instagram Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="profile">Facebook Watch</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="messages">Twitter Live</a>
+            <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+              aria-controls="settings">Youtube</a>
+          </div>
+          <hr>
+          <h6>Categorias</h1>
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                aria-controls="home">Bandas Latinas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="profile">Solistas</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="messages">Rock en Inglés</a>
+              <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                aria-controls="settings">Música Tropical</a>
+            </div>
+            <div class="container">
+              <div class="row">
+                <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+              </div>
+            </div>
+      </div>
+
+      <!--Página-->
+      <div class="col-9">
+      	<div class="container p-3 my-3 border">
+      		<h4 class="text-center">Ingrese los datos de la funcion</h4>
+	      <br><br>
+	      
+	      
+	        <form>
+	        	<div class="form-group">
+		        	<label>Selecciona uno de tus espectaculos aceptados</label>
+		        	<select class="form-control" name="cars" id="cars">
+		  				<option>Los Village Volvieron</option>
+		    			<option>Global Spirit</option>
+		    			<option>Memphis Blues World</option>
+		    			<option>Springsteen on Broadway</option>
+		    			<option>Bien de Familia</option>
+		    			<option>30 años</option>
+		    			<option>Grandes Éxitos 2020</option>
+		    			<option>Llega a Casa</option>
+		  			</select><br>
+		  		</div>
+		  		<div class="form-group">	
+		  			<label for="nombreFuncion">Nombre de la funcion: </label>
+		  			<input type="text" id="nombreFuncion" name="nombreFuncion" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"><br>
+		  		</div>
+		  		<div class="form-group">
+		  			<label for="fechaFuncion">Fecha de la funcion: </label>
+		  			<input type="date" id="fechaFuncion" name="fechaFuncion" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" "><br>
+		  		</div>
+		  		<div class="form-group">
+		  			<label for="horaFuncion">Ingresar hora:</label>
+		  			<input type="time" id="horaFuncion" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="horaFuncion""><br>
+		  		</div>
+		  		<div class="form-group">
+		  			<label for="artistas" >Seleccione artistas invitados:</label><br>
+		  			<select class="selectpicker" multiple data-live-search="true" multiple data-style="btn-primary" data-size="3" >
+		  			  	<option >Village People</option>
+		    			<option >Cyndi Lauper</option>
+		    			<option >La Triple Nelson</option>
+		    			<option >Bruce Springsteen</option>
+		    			<option >La Ley</option>
+		    			<option>Pimpinela</option>
+		    			<option >Depeche Mode</option>
+		    			<option>Dyango Ango</option>
+		    			<option>Alcides Violeta</option>
+		  			</select><br><br>
+		  		</div>
+		  		<div class="form-group">
+		  			<div class="custom-file">
+                    	<input type="file" class="custom-file-input" id="imagen">
+                    	<label class="custom-file-label" for="imagen">Elije una imagen</label>
+                  </div>
+
+		  		</div>
+		  		<div class="form-group">
+		  			<button id="btnComprar" type="button" class="btn btn-primary" onclick="comprar()">Confirmar Alta</button>
+		  		</div>
+	        </form>
+	    </div>   
+      </div>
+    </div>
+  </div>
+  
+   
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <p>Todos los derechos reservados ponele</p>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+</html>

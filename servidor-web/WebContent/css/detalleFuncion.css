@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+.presentacion {
+	font-size : 30px;
+	margin-top : 30px;
+	width:40%;
+	white-space: nowrap;
+}
+.informacion {
+	clear: left;
+	font-size : 25px;
+	margin-left: 50px;
+	margin-right: 150px;
+}
+.portada {
+	width : 200px;
+	height : 200px;
+	margin : 50px;
+	margin-top: 15px;
+	border-radius : 15px;
+	float : left;
+}
+#fecha {
+	font-size : 20px;
+}
+#desc {
+	font-size : 20px;
+	clear: left;
+}
+#demo {
+	width:700px;
+	margin-left:30px;
+}
+
+

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link href="../css/login.css" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  
+  <title>coronatickets.uy</title>
+
+</head>
+
+<body onresize="redireccionar()">
+	
+    <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                    <h3 class="login-heading mb-4">Bienvenido de nuevo!</h3>
+                    <form action="/servidor-web/Autenticacion" method="POST" id="authForm">
+                      <div class="form-label-group">
+                        <input type="text" id="inputEmail" class="form-control" placeholder="eMail or Nickname" required autofocus name="usuario">
+                        <label for="inputEmail">Usuario o correo</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="contrasenia">
+                        <label for="inputPassword">Contraseña</label>
+                      </div>
+                      
+                      <input id="mobile" name="mobile" type="hidden" value="">
+                      <input id="redirectInput" name="redirect" type="hidden" value="false">
+					  
+					  <input type="checkbox" id="recordarme" name="recordarme" value="true">
+					  <label for="recordarme">Recordarme</label>
+					  
+                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" onclick="login()">INGRESA</button>
+                      <div id="modalreg" class="text-center small">
+                        Todavía no estas registrado?
+                        <a href="#" data-toggle="modal" data-target="#registro_modal">Registrate aqui.</a></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="registro_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content" action="/servidor-web/Usuarios" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="modificarDatos" value="false">  
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registrarse</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNickname">Nickname:</label>
+                            <input required type="text" class="form-control" id="inputNickname" placeholder="Nickname" 
+                            	required name="nickname">
+                            <div class="invalid-feedback">
+          						Nickname ya tomado. Elije otro.
+        					</div>
+        					<div class="valid-feedback">
+          						Nickname disponible!
+        					</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputMail">Mail:</label>
+                            <input required type="email" class="form-control" id="inputMail" placeholder="Mail" 
+                            	required name="mail">
+                            <div class="invalid-feedback">
+          						Mail ya tomado. Elije otro.
+	       					</div>
+	       					<div class="valid-feedback">
+	         						Mail disponible!
+	       					</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputContra">Contraseña:</label>
+                            <input required type="password" class="form-control" id="inputContra" placeholder="Contraseña" 
+                            	required name="contrasenia">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputConfContra">Confirmación de contraseña:</label>
+                            <input required type="password" class="form-control" id="inputConfContra" placeholder="Contraseña"
+                            	required name="confcontrasenia">
+                            <div class="invalid-feedback">
+          						Las contraseñas deben coincidir.
+       						</div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNombre">Nombre:</label>
+                            <input required type="text" class="form-control" id="inputNombre" placeholder="Nombre"
+                            	required name="nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputApellido">Apellido:</label>
+                            <input required type="text" class="form-control" id="inputApellido" placeholder="Apellido"
+                            	required name="apellido">
+                        </div>
+                        <div class="form-group col-md-6">
+                        	<label for="inputApellido">Tipo de usuario:</label>
+                        	<br>
+	                        <input type="radio" id="tipoEspectador" name="tipousuario" value="espectador" required name="espectador" checked> 
+	                    		Espectador /
+	    					<input type="radio" id="tipoArtista" name="tipousuario" value="artista" required name="artista">
+								Artista <br>
+						</div>
+                    </div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputFecha">Fecha de nacimiento:</label>
+                        </div>
+                        <input required id="inputFecha" class="form-control" type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control"
+                            required name="fechanac">
+                    </div>
+                    
+                    <div class="form-row input-artista d-none">
+                    	<div class="form-group col-12">
+                    		<label for="inputDescripcion">Descripcion:</label>
+                            <textarea  type="text" class="form-control" id="inputDescripcion" placeholder="Descripcion"
+                            	 name="inputDescripcion"></textarea>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-row input-artista d-none">
+                    	<div class="form-group col-12">
+                    		<label for="inputBiografia">Biografia:</label>
+                            <textarea  type="text" class="form-control" id="inputBiografia" placeholder="Biografia"
+                            	 name="inputBiografia"></textarea>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-row input-artista d-none">
+                    	<div class="form-group col-12">
+                    		<label for="inputSitio">Sitio Web:</label>
+                            <input type="text" class="form-control" id="inputSitio" placeholder="Sitio"
+                            	 name="inputSitio">
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Foto de usuario*</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile"
+                            	required name="imagen">
+                            <label class="custom-file-label" for="customFile">Elegir foto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" id="btnRegistro">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+      
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Script del modal registro -->
+<script src="../js/registro.js"></script>
+<script src="../js/isMobile.js"></script>
+
+<script>
+	if (isMobile()) {
+		document.getElementById('modalreg').style.display='none';
+		document.getElementById('mobile').value='true'; 
+	}
+	
+	function redireccionar() {
+		if (!isMobile()) {
+			// FALATARIA CERRAR LA SESION ANTES
+			document.getElementById('mobile').value=''; 
+		}
+		else {
+			document.getElementById('mobile').value='true'; 
+		}
+	}
+	
+	function login() {
+		var authFormData = $("#authForm").serialize();
+		$.post("/servidor-web/Autenticacion", authFormData)
+			.done((msg)=> {
+				$("#redirectInput").val("true");
+				$("#authForm").submit();
+			})
+			.fail((error) => {
+				var errorMsg = "";
+				switch (error.status) {
+				case 401:
+					errorMsg = "Usuario o contraseña incorrectos";
+					break;
+				case 403:
+					errorMsg = "La web mobile está solo disponible para espectadores.";
+					break;
+				default:
+					errorMsg = "Error inesperado al autenticar el usuario."
+					break;
+				}
+				$("#authForm").before('<div class="alert alert-danger alert-dismissible fade show animate__bounceIn"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error! </strong> ' + errorMsg + ' </div>');
+			});
+	}
+	
+	$(document).ready(()=>{
+		$("#inputNickname").on("input", checkDisponibilidad);
+		$("#inputMail").on("input", checkDisponibilidad);
+	})
+	
+	function checkDisponibilidad() {
+		var inp = $(this).val();
+		console.log(inp);
+		$.get("/servidor-web/Usuarios", {
+			checkDisponibilidad : true,
+			input : inp
+		})
+		.done((data)=>{
+			if (data == "true" && inp != "") {
+				$(this).addClass("is-valid");
+				$(this).removeClass("is-invalid");
+				$("#btnRegistro").prop("disabled", false);
+			} else {
+				$(this).addClass("is-invalid");
+				$(this).removeClass("is-valid");
+				$("#btnRegistro").prop("disabled", true);
+			}
+		})
+		.fail(() => alert("ERROR INESPERADO!"));
+	}
+	
+</script>

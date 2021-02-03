@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Hello, world!</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <!-- Titulo -->
+        <a class="navbar-brand col-sm-auto " href="#">Coronatickets</a>
+
+        <!-- Busqueda -->
+        <form class="form-inline col-sm-auto">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Usuario
+        <div class="btn-group col-md-auto col-sm-12">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span><img class="nav-item mr-1" height="20px"
+                        src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png"></span>
+                Juan Artista
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Alta Espectaculo</a>
+                <a class="dropdown-item" href="#">Crear Paquete</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Ver Perfil</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+            </div>
+        </div> 
+        -->
+
+        <!-- Registro (gatilla el modal) -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registro_modal">
+            Registrarse
+        </button>
+
+
+
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Side Bar-->
+            <div class="bg-light border-right border-bottom col-3 p-3">
+                <h6>Plataformas</h1>
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#"
+                            aria-controls="home">Facebook</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                            aria-controls="profile">Twiter
+                            Live</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                            aria-controls="messages">Youtube</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                            aria-controls="settings">Twich</a>
+                    </div>
+                    <hr>
+                    <h6>Categorias</h1>
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#"
+                                aria-controls="home">Música</a>
+                            <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                                aria-controls="profile">Teatro</a>
+                            <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                                aria-controls="messages">Literatura</a>
+                            <a class="list-group-item list-group-item-action" data-toggle="list" href="#"
+                                aria-controls="settings">Videojuegos</a>
+                        </div>
+            </div>
+
+            <!--Página-->
+            <div class="col-9">
+                <p>Aca van las cosas</p>
+                <p>Falta hacer responsive</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de registro -->
+    <div class="modal fade" id="registro_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registrarse</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNickname">Nickname:</label>
+                            <input required type="text" class="form-control" id="inputNickname" placeholder="Nickname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputMail">Mail:</label>
+                            <input required type="email" class="form-control" id="inputMail" placeholder="Mail">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputContra">Contraseña:</label>
+                            <input required type="password" class="form-control" id="inputContra"
+                                placeholder="Contraseña">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputConfContra">Confirmación de contraseña:</label>
+                            <input required type="password" class="form-control" id="inputConfContra"
+                                placeholder="Contraseña">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNombre">Nombre:</label>
+                            <input required type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputApellido">Apellido:</label>
+                            <input required type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputFecha">Fecha de nacimiento:</label>
+                        </div>
+                        <input required id="inputFecha" class="form-control" type="date" name="bday" max="3000-12-31"
+                            min="1000-01-01" class="form-control">
+                    </div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Foto de usuario*</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Elegir foto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <p>Todos los derechos reservados ponele</p>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/registro.js"></script>
+
+
+</html>

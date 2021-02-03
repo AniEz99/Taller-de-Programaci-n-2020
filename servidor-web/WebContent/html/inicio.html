@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <title>Inicio</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <!-- Titulo -->
+        <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+        <!-- Busqueda -->
+        <form class="form-inline col-sm-auto" action="busqueda.html">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Usuario -->
+        <div class="btn-group col-md-auto col-sm-12">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+                        src="https://bit.ly/3jrashA"></span>
+                Emma Watson
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+                <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+                <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+                <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Side Bar-->
+            <div class="bg-light border-right border-bottom col-3 p-3">
+                <h6>Plataformas</h1>
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+                        aria-controls="home">Instagram Live</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                        aria-controls="profile">Facebook Watch</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                        aria-controls="messages">Twitter Live</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                        aria-controls="settings">Youtube</a>
+                </div>
+                <hr>
+                <h6>Categorias</h1>
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                        aria-controls="home">Bandas Latinas</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                        aria-controls="profile">Solistas</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                        aria-controls="messages">Rock en Inglés</a>
+                    <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                        aria-controls="settings">Música Tropical</a>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar Paquetes</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--Página-->
+            <div class="col-9">
+                <header class="mx-2 my-4">
+                    <h1>
+                        ¡Bienvenido a CoronaTickets!
+                    </h1>
+                    <i>Quedate en casa viendo espectaculos por internet</i>
+                </header>
+                <!--Carousel Espectaculos-->
+                <div class="container col-12 mx-2">
+                    <h4 class="mt-2">Los mejores espectaculos del mes</h4>
+                    <div id="carouselEspectaculoControls" class="carousel slide carousel-multi-item"
+                        data-ride="carousel">
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carouselEspectaculoControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselEspectaculoControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                            <li data-target="#multi-item-example" data-slide-to="1"></li>
+                            <li data-target="#multi-item-example" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+                            <div class="carousel-item active">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Los Village Volvieron</h5>
+                                                <p class="card-text">Espectáculo de retorno de
+                                                    los Village People.</p>
+                                                <a href="DetalleEspectaculo.html"
+                                                    class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Memphis
+                                                    Blues World</h5>
+                                                <p class="card-text">Espectáculo promoviendo
+                                                    álbum Memphis Blues.</p>
+                                                <a href="DetalleEspectaculo.html"
+                                                    class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Global Spirit</h4>
+                                                    <p class="card-text">Espectáculo donde se
+                                                        presenta el álbum Spirit.</p>
+                                                    <a href="DetalleEspectaculo.html"
+                                                        class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.First slide-->
+
+                            <!--Second slide-->
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Los Village Volvieron</h5>
+                                                <p class="card-text">Espectáculo de retorno de
+                                                    los Village People.</p>
+                                                <a href="DetalleEspectaculo.html"
+                                                    class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Memphis
+                                                    Blues World</h5>
+                                                <p class="card-text">Espectáculo promoviendo
+                                                    álbum Memphis Blues.</p>
+                                                <a href="DetalleEspectaculo.html"
+                                                    class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Global Spirit</h4>
+                                                    <p class="card-text">Espectáculo donde se
+                                                        presenta el álbum Spirit.</p>
+                                                    <a href="DetalleEspectaculo.html"
+                                                        class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.Second slide-->
+
+
+                        </div>
+                        <!--/.Slides-->
+
+                    </div>
+                </div>
+                <!--/.Carousel Espectaculos-->
+                <hr>
+                <!--Carousel Paquetes-->
+                <div class="container col-12 mx-2">
+                    <h4 class="mt-2">Los mejores paquetes del mes</h4>
+                    <div id="carouselPaqueteControls" class="carousel slide carousel-multi-item" data-ride="carousel">
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carouselPaqueteControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselPaqueteControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                            <li data-target="#multi-item-example" data-slide-to="1"></li>
+                            <li data-target="#multi-item-example" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+                            <div class="carousel-item active">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/3l9Vihe" alt="Card image cap">
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete de
+                                                    Bandas</h5>
+                                                <p class="card-text">Paquete de bandas musicales.</p>
+                                                <a href="detallePaquete.html" class="btn btn-primary fa-pull-right">Ver
+                                                    info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/2HSF4e0" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete
+                                                    Solistas</h5>
+                                                <p class="card-text">Paquete de solistas.</p>
+                                                <a href="detallePaquete.html" class="btn btn-primary fa-pull-right">Ver
+                                                    info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/3ndBhIw" alt="Card image cap">
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete
+                                                    Latino</h4>
+                                                    <p class="card-text">Paquete de espectáculos
+                                                        latinos. </p>
+                                                    <a href="detallePaquete.html"
+                                                        class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.First slide-->
+
+
+                            <!--Second slide-->
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/3l9Vihe" alt="Card image cap">
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete de
+                                                    Bandas</h5>
+                                                <p class="card-text">Paquete de bandas musicales.</p>
+                                                <a href="#" class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/2HSF4e0" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete
+                                                    Solistas</h5>
+                                                <p class="card-text">Paquete de solistas.</p>
+                                                <a href="#" class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="card mb-2 h-100">
+                                            <img class="card-img-top" src="https://bit.ly/3ndBhIw" alt="Card image cap">
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">Paquete
+                                                    Latino</h4>
+                                                    <p class="card-text">Paquete de espectáculos
+                                                        latinos. </p>
+                                                    <a class="btn btn-primary fa-pull-right">Ver info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.Second slide-->
+
+
+                        </div>
+                        <!--/.Slides-->
+
+                    </div>
+                </div>
+                <!--/.Carousel Paquetes-->
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <p>Todos los derechos reservados ponele</p>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

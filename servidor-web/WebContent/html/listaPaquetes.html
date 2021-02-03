@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Paquetes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../bootstrap/js/font-awesome.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <!-- Titulo -->
+        <a class="navbar-brand col-sm-auto " href="inicio.html">CoronaTickets</a>
+
+        <!-- Busqueda -->
+        <form class="form-inline col-sm-auto">
+            <div class="input-group">
+                <input class="form-control" type="search" disabled placeholder="Buscar" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="btn btn-outline-success my-0" href="busqueda.html" type="submit">Buscar</a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Usuario -->
+        <div class="btn-group col-md-auto col-sm-12">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span><img class="nav-item mr-1" height="30px" style="border-radius : 10px;"
+                        src="https://bit.ly/3jrashA"></span>
+                Emma Watson
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="AltaEspectaculo.html" class="dropdown-item">Alta Espectaculo</a>
+                <a href="crearPaquete.html" class="dropdown-item">Crear Paquete</a>
+                <a href="altaFuncion.html" class="dropdown-item">Alta Función</a>
+                <a href="agregarEspectaculoPaquete.html" class="dropdown-item">Agregar espectáculo a paquete</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="DetalleUsuario.html">Ver Perfil</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Side Bar-->
+            <div class="bg-light border-right border-bottom col-3 p-3">
+                <h6>Plataformas</h1>
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action " href="busquedaPlataformas.html"
+                            aria-controls="home">Instagram Live</a>
+                        <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                            aria-controls="profile">Facebook Watch</a>
+                        <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                            aria-controls="messages">Twitter Live</a>
+                        <a class="list-group-item list-group-item-action" href="busquedaPlataformas.html"
+                            aria-controls="settings">Youtube</a>
+                    </div>
+                    <hr>
+                    <h6>Categorias</h1>
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action " href="busquedaCategorias.html"
+                                aria-controls="home">Bandas Latinas</a>
+                            <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                                aria-controls="profile">Solistas</a>
+                            <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                                aria-controls="messages">Rock en Inglés</a>
+                            <a class="list-group-item list-group-item-action" href="busquedaCategorias.html"
+                                aria-controls="settings">Música Tropical</a>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <a class="btn btn-primary mt-2 mx-auto col-12" href="listaPaquetes.html">Listar
+                                    Paquetes</a>
+                            </div>
+                        </div>
+            </div>
+
+            <!--Página-->
+            <div class="col-9">
+                <div class="container">
+                    <h5 class="mb-3 pl-3 text-dark"><i>Paquetes:</i></h5>
+                    <div class="list-group">
+                        <a href="detallePaquete.html"
+                            class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="row">
+                                <img src="https://bit.ly/3l9Vihe" class="col-3" alt="">
+                                <div class="col-9 right">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Paquete de
+                                            Bandas</h5>
+                                        <small>Descuento: 20%</small>
+                                    </div>
+                                    <p class="mb-1">Paquete de bandas musicales.</p>
+                                    <small class="text-muted">Precio: $1500</small>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="detallePaquete.html"
+                            class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="row">
+                                <img src="https://bit.ly/2HSF4e0" class="col-3 h-100" alt="">
+                                <div class="col-9 right">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Paquete Solistas</h5>
+                                        <small class="text-muted">Descuento: 30%</small>
+                                    </div>
+                                    <p class="mb-1">Paquete de solistas.</p>
+                                    <small class="text-muted">Precio: $1600</small>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="detallePaquete.html"
+                            class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="row">
+                                <img src="https://bit.ly/3ndBhIw" class="col-3 h-100" alt="">
+                                <div class="col-9 right">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Paquete Latino</h5>
+                                        <small class="text-muted">Descuento: 15%</small>
+                                    </div>
+                                    <p class="mb-1">Paquete de espectáculos latinos.</p>
+                                    <small class="text-muted">Precio: $805</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <p>Todos los derechos reservados ponele</p>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
